@@ -31,7 +31,7 @@ console.log("isActive", isActive)
           <li><NavLink activeClassName="active" to='/about'>About</NavLink></li>
           <li><NavLink activeClassName="active" to='/service/inner'>Service</NavLink></li>
       </ul> */}
-      <ul className={`${!isActive ? "active" : " "}`}>
+      <ul className={`${!isActive ? "active" : " "}`} onClick={ () => setActive(!isActive)}>
           {/* Checking the current path name using javascript ternary operator and if true adding active classname to it */}
         <li><Link to="/home" className={splitLocation[1] === "" ? "active" : ""}>Home</Link></li>
         <li><Link to="/about" className={splitLocation[1] === "about" ? "active" : ""}>About</Link></li>
